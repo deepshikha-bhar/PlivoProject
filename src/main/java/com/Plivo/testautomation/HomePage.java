@@ -51,9 +51,15 @@ public class HomePage
     {
         driver.findElement(By.xpath("//input[@placeholder='City or State']")).sendKeys(city);
     }
-    public void clickSearch() throws InterruptedException {
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-        Thread.sleep(10000);
+    public void clickSearch(){
+        try {
+            driver.findElement(By.xpath("//button[@type='submit']")).click();
+            Thread.sleep(10000);
+        }
+        catch(Exception e)
+        {
+
+        }
     }
     public void clickBuyForEvenNumber()
     {
@@ -67,6 +73,7 @@ public class HomePage
             }
             i++;
         }
+
     }
 
     public void validateSuccessMessage()
